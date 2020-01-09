@@ -8,22 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class TestComponent implements OnInit {
 
   public name = "Ken";
-  public successClass = "text-success";
-  public hasError = true;
-  public isSpecial = true;
-  public highlightColor = "orange";
-  public titleStyles = {
-    color: "blue",
-    fontStyle: "italic"
-  }
+  public greeting = "";
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  greetUser() {
-    return "Hello " + this.name;
+  onClick(event) {
+    console.log(event);
+    this.greeting = 'Welcome to Angular tutorial';
   }
     
 }
