@@ -15,9 +15,8 @@ export class TestComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClick(event) {
-    console.log(event);
-    this.greeting = 'Welcome to Angular tutorial';
+  logMessage(value) {
+    console.log(value);
   }
     
 }

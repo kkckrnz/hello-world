@@ -1,6 +1,4 @@
 <h2>Welcome {{name}}</h2>
 
-<button (click)="onClick($event)">Greet</button>
-<h2>{{greeting}}</h2>
-
-<button (click)="greeting='Welcome to Maru\'s playground'">Greet2</button>
+<input #myInput type="text">
+<button (click)="logMessage(myInput.value)">Log</button>
