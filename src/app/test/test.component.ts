@@ -9,13 +9,12 @@ export class TestComponent implements OnInit {
 
   public name = "Ken";
   public successClass = "text-success";
-  public hasError = false;
+  public hasError = true;
   public isSpecial = true;
-  public messageClasses = {
-    "text-sepcial": this.isSpecial,
-    "text-success": !this.hasError,
-    "text-danger": this.hasError,
-    
+  public highlightColor = "orange";
+  public titleStyles = {
+    color: "blue",
+    fontStyle: "italic"
   }
 
   constructor() { }

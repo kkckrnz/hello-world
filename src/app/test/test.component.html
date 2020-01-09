@@ -1,17 +1,5 @@
 <h2>Welcome {{name}}</h2>
-<h2 class="text-success">Hello World</h2>
-<h2 [class]="successClass">Hello World</h2>
-<h2 class="text-special">Hello World</h2>
-<h2 [class.text-danger]="hasError">Hello World</h2>
 
-<h2 [ngClass]="messageClasses">Hello World</h2>
-
-
-<!-- <h2>{{2+2}}</h2>
-<h2>{{"Welcome " + name}}</h2>
-<h2>{{name.length}}</h2>
-<h2>{{name.toUpperCase()}}</h2>
-<h2>{{greetUser()}}</h2>
-<h2>{{siteUrl}}</h2> -->
-
-<!-- <input [id]="myId" type="text" value="Ken"> -->
+<h2 [style.color]="hasError ? 'red' : 'green'">Style Binding</h2>
+<h2 [style.color]="highlightColor">Style Binding 2</h2>
+<h2 [ngStyle]="titleStyles">Style Binding 3</h2>
