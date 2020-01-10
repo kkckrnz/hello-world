@@ -1,4 +1,15 @@
-<h2>Welcome {{name}}</h2>
+<!-- <h2 *ngIf="displayName; else elseBlock">Name is shown</h2>
 
-<input [(ngModel)]="name" type="text">
-{{name}}
+<ng-template #elseBlock>
+    <h2>Name is hidden</h2>
+</ng-template> -->
+
+<div *ngIf="displayName; then thenBlock; else elseBlock"></div>
+
+<ng-template #thenBlock>
+    <h2>Shown</h2>
+</ng-template>
+
+<ng-template #elseBlock>
+    <h2>Hidden</h2>
+</ng-template>
