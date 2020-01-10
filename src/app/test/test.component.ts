@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+// Be careful here, because EventEmitter is automatically imported from protractor and that gives me an error.
+// import { EventEmitter } from 'protractor';
 
 @Component({
   selector: 'app-test',
@@ -7,11 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  public colors = ["red", "blue", "green", "yellow"];
+  // @Input() public parentData;
+  // Or this can be done using alias
+  @Input('parentData') public name;
+
+  @Output() public childEvent = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
   }
-    
+  
+  fireEvent() {
+    this.childEvent.emit("Hey this is a message from child component");
+  }
 }
