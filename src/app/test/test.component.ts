@@ -7,16 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  public name = "Ken";
-  public greeting = "";
+  public name = '';
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-  logMessage(value) {
-    console.log(value);
   }
     
 }
